@@ -60,7 +60,7 @@ Read the data into a data frame - this is how R often stores data - it's not the
 
 ## Non-time series object for comparison
 ```{r read into dataframe}
-soiltemp <- read.csv("soiltemp2.csv")
+soiltemp <- read.csv("https://raw.githubusercontent.com/Ratey-AtUWA/Environmental-time-series/main/soiltemp2.csv")
 colnames(soiltemp) <- c("Date","temp")
 ```
 
@@ -78,7 +78,7 @@ plot(soiltemp$temp, type = "l", col = 6)
 We really want the data in a different type of R object! We use the '\texttt{zoo}' package to read the data in as a time series. This gives a data object of class 'zoo' which is much more flexible than the default time series object in R.
 
 ```{r read and summary csv to zoo}
-soiltemp_T15_zoo <- read.csv.zoo("soiltemp2.csv",
+soiltemp_T15_zoo <- read.csv.zoo("https://raw.githubusercontent.com/Ratey-AtUWA/Environmental-time-series/main/soiltemp2.csv",
                                format = "%Y-%m-%d %H:%M:%S", 
                                tz = "Australia/Perth", 
                                index.column=1,
