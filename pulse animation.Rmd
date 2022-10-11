@@ -1,0 +1,13 @@
+---
+title: "pulse animation"
+output: 
+  html_document: 
+    fig_width: 4
+    fig_height: 8
+    smart: no
+    self_contained: no
+---
+
+![](pulseAnim.gif)
+
+The animation should be here.
